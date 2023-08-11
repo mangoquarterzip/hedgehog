@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+    <!-- Include Daisy UI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.10.0/dist/full.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Hedgehog.bet</div>
+    <div class="menu">
+      <div>Docs</div>
+      <div>Whitepaper</div>
+      <div>Donate</div>
+      <button class ="connect-wallet", id = "connect-wallet"> Connect wallet</button>
+
+    </div>
+  </header>
+  <button class="btn btn-primary" id = "deploy">Deploy</button>
+  <button class="btn btn-primary">Lock (1)</button>
+  <button class="btn btn-primary">Lock(2)</button>
+  <button class="btn btn-primary">Resolve bet</button>
+  <div class="containerNew">
+    <div class="boxNew">
+        <button class="btn btn-primary" id = "startBet">Start Bet</button>
+        <button class="btn btn-primary">Add ERC20s</button>
+        <select class="select select-secondary w-full max-w-xs">
+            <option disabled selected>Choose an ERC20</option>
+            <option>WETH</option>
+            <option>WBTC</option>
+            <option>LINK</option>
+            <option>DOGE</option>
+            <option>WSOL</option>
+          </select>
+        <button class="btn btn-primary">Add NFTs</button>
+        <select class="select select-secondary w-full max-w-xs">
+            <option disabled selected>Choose NFT</option>
+            <option>WETH</option>
+            <option>WBTC</option>
+            <option>LINK</option>
+            <option>DOGE</option>
+            <option>WSOL</option>
+          </select>
+
+        
+
+    </div>
+    <div class="boxNew">
+        <button class="btn btn-primary">Add ERC20s</button>
+        <button class="btn btn-primary">Add NFTs</button>
+
+
+    </div>
+
+  </div>
+
+  <!-- Include Daisy UI JavaScript (Optional, for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/daisyui@1.10.0/dist/full.js"></script>
+
+  <script src="connect-wallet.js"></script>
+  <script src="deploy.js"></script>
+  <script src="./actions/startBet.js"></script>
+</body>
+</html>
